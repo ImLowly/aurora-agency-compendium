@@ -929,12 +929,410 @@
       color: var(--card-muted, var(--kim-muted, #59534B));
     }
 
+    /* 00 // 60-Second Partner Brief */
+    .brief-door-card {
+      padding: 15px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 32%, transparent);
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 72%, transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .brief-door-card.is-primary-door {
+      border-color: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    .brief-meta-line {
+      font-size: 11px;
+      font-weight: 800;
+      padding-top: 8px;
+      margin-top: auto;
+      border-top: 1px dashed color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 26%, transparent);
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .compression-list {
+      list-style: none;
+      padding-left: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .compression-list li {
+      padding: 7px 10px;
+      border-left: 3px solid var(--card-accent, var(--kim-accent, #D03A2B));
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 66%, transparent);
+    }
+
+    /* 07 // Team Blog Timeline (Studio Dispatches) */
+    .timeline-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .timeline-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .timeline-count {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--card-muted, var(--kim-muted, #59534B));
+    }
+
+    .timeline-stream {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-left: 22px;
+      border-left: 3px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 32%, transparent);
+    }
+
+    .dispatch-card {
+      position: relative;
+      padding: 15px 16px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 28%, transparent);
+      background: color-mix(in srgb, var(--card-well, #E9E3D5) 54%, transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .dispatch-card::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 19px;
+      width: 13px;
+      height: 13px;
+      border: 2.5px solid var(--card-ink, var(--kim-ink, #141210));
+      background: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    .dispatch-card.is-hidden {
+      display: none;
+    }
+
+    .dispatch-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .dispatch-title {
+      font-size: 16.5px;
+      font-weight: 900;
+      line-height: 1.24;
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .dispatch-summary {
+      font-size: 13px;
+      color: var(--card-muted, var(--kim-muted, #59534B));
+      line-height: 1.52;
+    }
+
+    .status-pill {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border: 2px solid var(--card-ink, var(--kim-ink, #141210));
+      white-space: nowrap;
+    }
+
+    .status-live {
+      background: var(--card-accent, var(--kim-accent, #D03A2B));
+      color: var(--kim-accent-fg, #FFFDF6);
+    }
+
+    .status-active {
+      background: var(--card-accent2, var(--kim-accent2, #3C5A78));
+      color: #FFFDF6;
+    }
+
+    .status-next {
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 85%, transparent);
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .dispatch-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .dispatch-details {
+      margin-top: 2px;
+    }
+
+    .dispatch-notes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .dispatch-note-block {
+      padding: 10px 11px;
+      border: 1.5px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 20%, transparent);
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 76%, transparent);
+      font-size: 12.5px;
+      line-height: 1.48;
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    /* 08 // Recruiting Pipeline & Scorecards */
+    .pipe-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0 10px;
+    }
+
+    .pipe-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .pipe-stage {
+      padding: 13px 11px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 30%, transparent);
+      background: color-mix(in srgb, var(--card-well, #E9E3D5) 56%, transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pipe-stage.is-final {
+      border-color: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    .pipe-stage-name {
+      font-size: 12.5px;
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--card-ink, var(--kim-ink, #141210));
+      min-height: 30px;
+    }
+
+    .pipe-counter-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .pipe-step-btn {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      font-weight: 900;
+      border: 2px solid var(--card-ink, var(--kim-ink, #141210));
+      background: var(--kim-paper2, #F8F4EA);
+      color: var(--card-ink, var(--kim-ink, #141210));
+      cursor: pointer;
+      box-shadow: 2px 2px 0 var(--kim-plate, #3A3631);
+    }
+
+    .pipe-step-btn:hover {
+      background: var(--card-accent, var(--kim-accent, #D03A2B));
+      color: var(--kim-accent-fg, #FFFDF6);
+    }
+
+    .pipe-count {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--card-ink, var(--kim-ink, #141210));
+      text-align: center;
+      min-width: 34px;
+    }
+
+    .pipe-rate {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    .pipe-bench {
+      font-size: 10.5px;
+      color: var(--card-muted, var(--kim-muted, #59534B));
+      line-height: 1.35;
+      margin-top: auto;
+    }
+
+    .pipe-summary-bar {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    /* 09 // Weekly BD Rhythm Table & Deal Funnel Tracker */
+    .rhythm-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 14px 0 18px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 30%, transparent);
+      background: color-mix(in srgb, var(--card-well, #E9E3D5) 48%, transparent);
+    }
+
+    .rhythm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      min-width: 640px;
+    }
+
+    .rhythm-table th,
+    .rhythm-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1.5px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 18%, transparent);
+      vertical-align: top;
+    }
+
+    .rhythm-table th {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 82%, transparent);
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .rhythm-table tr:last-child td {
+      border-bottom: none;
+      font-weight: 800;
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 68%, transparent);
+    }
+
+    .funnel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .funnel-stage-card {
+      padding: 13px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 28%, transparent);
+      background: color-mix(in srgb, var(--card-well, #E9E3D5) 54%, transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .funnel-stage-card.is-revenue {
+      border-color: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    .kpi-span-2 {
+      grid-column: span 2;
+      border-color: var(--card-accent, var(--kim-accent, #D03A2B));
+    }
+
+    /* Pass 2: Partner Brief Sharing Controls & Adversarial Failure-Mode Guardrails */
+    .brief-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      border: 2px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 26%, transparent);
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 78%, transparent);
+    }
+
+    .brief-action-note {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--card-muted, var(--kim-muted, #59534B));
+      margin-left: auto;
+    }
+
+    .guardrails-panel {
+      margin-top: 16px;
+      padding: 14px;
+      border: 2px solid var(--card-accent, var(--kim-accent, #D03A2B));
+      background: color-mix(in srgb, var(--card-well, #E9E3D5) 68%, transparent);
+    }
+
+    .guardrails-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      padding-bottom: 7px;
+      border-bottom: 1.5px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 22%, transparent);
+    }
+
+    .guardrails-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .guardrail-item {
+      padding: 10px 11px;
+      border: 1.5px solid color-mix(in srgb, var(--card-ink, var(--kim-ink, #141210)) 30%, transparent);
+      background: color-mix(in srgb, var(--kim-paper2, #F8F4EA) 86%, transparent);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .guardrail-title {
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .guardrail-item p {
+      font-size: 11.5px;
+      line-height: 1.42;
+      color: var(--card-muted, var(--kim-muted, #59534B));
+    }
+
+    .guardrail-item strong {
+      color: var(--card-ink, var(--kim-ink, #141210));
+    }
+
+    .print-only-header {
+      display: none;
+    }
+
     /* Responsive */
     @media (max-width: 960px) {
-      .grid-5 {
+      .grid-5,
+      .pipe-grid,
+      .guardrails-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .grid-4 {
+      .grid-4,
+      .pipe-summary-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .funnel-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .calc-layout {
@@ -942,6 +1340,13 @@
       }
       .hero-metrics {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .dispatch-notes {
+        grid-template-columns: 1fr;
+      }
+      .brief-action-note {
+        margin-left: 0;
+        width: 100%;
       }
     }
 
@@ -963,8 +1368,226 @@
       .grid-2,
       .grid-4,
       .grid-5,
-      .kpi-grid {
+      .kpi-grid,
+      .pipe-grid,
+      .pipe-summary-bar,
+      .funnel-grid,
+      .guardrails-grid {
         grid-template-columns: 1fr;
+      }
+      .timeline-stream {
+        padding-left: 16px;
+      }
+      .dispatch-card::before {
+        left: -25px;
+      }
+      .kpi-span-2 {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Clean Ink-Friendly Print Stylesheet */
+    @media print {
+      @page {
+        margin: 0.45in;
+      }
+
+      html,
+      body,
+      .kim-sheet {
+        background: #FFFFFF !important;
+        color: #111111 !important;
+        overflow: visible !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .kim-dock,
+      canvas,
+      .kim-card-canvas,
+      .brief-actions,
+      .medium-ribbon,
+      .ribbon-label,
+      .copy-script-btn,
+      .pipe-step-btn,
+      .timeline-toolbar,
+      .tab-row,
+      #reset-checklist-btn,
+      #reset-recruit-pipe-btn,
+      #reset-sales-funnel-btn {
+        display: none !important;
+      }
+
+      .kim-stage {
+        max-width: 100% !important;
+        padding: 0 !important;
+        gap: 12px !important;
+      }
+
+      .kim-card {
+        border: 1.5px solid #222222 !important;
+        background: #FFFFFF !important;
+        box-shadow: none !important;
+        transform: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .kim-card-inner {
+        padding: 14px 16px !important;
+        color: #111111 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+
+      .sub-box,
+      .brief-door-card,
+      .guardrails-panel,
+      .guardrail-item,
+      .callout-strip,
+      .phase-card,
+      .dispatch-card,
+      .pipe-stage,
+      .funnel-stage-card,
+      .kpi-card,
+      .script-card,
+      .script-pre,
+      .compression-list li {
+        background: #FFFFFF !important;
+        color: #111111 !important;
+        border-color: #333333 !important;
+        box-shadow: none !important;
+      }
+
+      .chapter-lead,
+      .sub-box p,
+      .sub-box li,
+      .guardrail-item p,
+      .brief-meta-line,
+      .manifesto-meta {
+        color: #222222 !important;
+      }
+
+      .chapter-kicker,
+      .sub-kicker,
+      .hero-accent,
+      .aurora-star {
+        color: #111111 !important;
+        background: none !important;
+        -webkit-text-fill-color: #111111 !important;
+      }
+
+      a {
+        color: #111111 !important;
+        text-decoration: underline !important;
+      }
+
+      /* Single-Page Executive Brief Mode (triggered by Print 1-Page Executive Brief button) */
+      body.print-brief-only .print-only-header {
+        display: flex !important;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid #111111;
+      }
+
+      body.print-brief-only #card-hero,
+      body.print-brief-only #ch-01,
+      body.print-brief-only #ch-02,
+      body.print-brief-only #ch-03,
+      body.print-brief-only #ch-04,
+      body.print-brief-only #ch-05,
+      body.print-brief-only #ch-06,
+      body.print-brief-only #ch-07,
+      body.print-brief-only #ch-08,
+      body.print-brief-only #ch-09 {
+        display: none !important;
+      }
+
+      body.print-brief-only #ch-00 .kim-card-inner {
+        padding: 12px 14px !important;
+      }
+
+      body.print-brief-only #ch-00 .chapter-head {
+        margin-bottom: 8px !important;
+        padding-bottom: 6px !important;
+      }
+
+      body.print-brief-only #ch-00 .chapter-title {
+        font-size: 18pt !important;
+      }
+
+      body.print-brief-only #ch-00 .chapter-lead {
+        font-size: 9.5pt !important;
+        margin-bottom: 10px !important;
+      }
+
+      body.print-brief-only #ch-00 .sub-box,
+      body.print-brief-only #ch-00 .brief-door-card {
+        padding: 9px 10px !important;
+        gap: 4px !important;
+      }
+
+      body.print-brief-only #ch-00 .sub-box h3,
+      body.print-brief-only #ch-00 .brief-door-card h3 {
+        font-size: 10.5pt !important;
+      }
+
+      body.print-brief-only #ch-00 .sub-box p,
+      body.print-brief-only #ch-00 .sub-box li,
+      body.print-brief-only #ch-00 .brief-door-card p {
+        font-size: 8.6pt !important;
+        line-height: 1.35 !important;
+      }
+
+      body.print-brief-only #ch-00 .compression-list {
+        gap: 4px !important;
+      }
+
+      body.print-brief-only #ch-00 .compression-list li {
+        padding: 4px 7px !important;
+      }
+
+      body.print-brief-only #ch-00 .brief-meta-line {
+        font-size: 8pt !important;
+        padding-top: 5px !important;
+      }
+
+      body.print-brief-only #ch-00 .guardrails-panel {
+        margin-top: 10px !important;
+        padding: 9px 10px !important;
+      }
+
+      body.print-brief-only #ch-00 .guardrails-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+      }
+
+      body.print-brief-only #ch-00 .guardrail-item {
+        padding: 6px 7px !important;
+      }
+
+      body.print-brief-only #ch-00 .guardrail-title {
+        font-size: 8.4pt !important;
+      }
+
+      body.print-brief-only #ch-00 .guardrail-item p {
+        font-size: 7.8pt !important;
+        line-height: 1.32 !important;
+      }
+
+      body.print-brief-only .manifesto-inner {
+        padding: 8px 12px !important;
+      }
+
+      body.print-brief-only .manifesto-quote {
+        font-size: 10pt !important;
+      }
+
+      body.print-brief-only .manifesto-meta {
+        font-size: 8pt !important;
       }
     }
   </style>
@@ -1017,12 +1640,16 @@
         </div>
 
         <nav class="jump-bar kim-mono" aria-label="Compendium chapter navigation">
+          <a class="jump-pill" href="#ch-00">00 // 60-Sec Brief</a>
           <a class="jump-pill" href="#ch-01">01 // Campus Thesis</a>
           <a class="jump-pill" href="#ch-02">02 // BD Flywheel &amp; Offers</a>
           <a class="jump-pill" href="#ch-03">03 // Pod Roles &amp; Prism</a>
           <a class="jump-pill" href="#ch-04">04 // Multi-Campus Graph</a>
           <a class="jump-pill" href="#ch-05">05 // Economics Calculator</a>
           <a class="jump-pill" href="#ch-06">06 // 90-Day Playbook</a>
+          <a class="jump-pill" href="#ch-07">07 // Studio Dispatches</a>
+          <a class="jump-pill" href="#ch-08">08 // Recruiting Kit</a>
+          <a class="jump-pill" href="#ch-09">09 // Sales Flow Engine</a>
         </nav>
 
         <div class="telemetry-bar kim-mono">
@@ -1034,6 +1661,15 @@
     </header>
 
     <main class="kim-stage">
+      <!-- Print-Only Executive Masthead (shown when printing 1-page brief) -->
+      <div class="print-only-header">
+        <div>
+          <strong style="font-size: 13pt;">aurora✳ // CAMPUS STUDIO EXECUTIVE BRIEF</strong>
+          <div class="kim-mono" style="font-size: 8.5pt;">Interview-Led Social Media Studio &middot; 60 / 25 / 15 Transparent Split</div>
+        </div>
+        <div class="kim-mono" style="font-size: 8pt; text-align: right;">Attention is a responsibility.<br />Find what shines.</div>
+      </div>
+
       <!-- HERO: AURORA CAMPUS OPERATING EDITION -->
       <section class="kim-card" id="card-hero" data-card-id="hero" data-card-medium="sumi-ink" data-take="1">
         <canvas class="kim-card-canvas" aria-hidden="true"></canvas>
@@ -1071,6 +1707,124 @@
 
           <div class="ribbon-label kim-mono">Switch renderer medium across the entire compendium (click active swatch for 9-medium chapter cycle):</div>
           <div class="medium-ribbon" id="kim-medium-ribbon"></div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 00: 60-SECOND PARTNER BRIEF -->
+      <section class="kim-card" id="ch-00" data-card-id="ch-00" data-card-medium="colored-pencil" data-take="1">
+        <canvas class="kim-card-canvas" aria-hidden="true"></canvas>
+        <div class="kim-card-inner">
+          <div class="chapter-head">
+            <div>
+              <div class="chapter-kicker kim-mono">00 // 60-SECOND PARTNER BRIEF</div>
+              <h2 class="chapter-title kim-display">Shortest Path, Least Work, Maximum Clarity</h2>
+            </div>
+            <span class="kim-badge kim-mono card-med-tag">001 COLORED-PENCIL</span>
+          </div>
+
+          <p class="chapter-lead">
+            For aligned founders, campus hosts, alumni mentors, and local employers who want Aurora's full operating model in 60 seconds: zero pitch decks, fixed scope, and explicit guardrails from Shoot #1.
+          </p>
+
+          <div class="brief-actions" role="region" aria-label="Share or print executive partner brief">
+            <button type="button" id="copy-partner-brief-btn" class="kim-btn kim-btn-active">Copy 60-Sec Partner Summary</button>
+            <button type="button" id="print-brief-btn" class="kim-btn">Print 1-Page Executive Brief</button>
+            <span class="kim-mono brief-action-note" id="brief-action-status" aria-live="polite">Plain-text pitch ready for DM / SMS / email &middot; Ink-friendly 1-page print</span>
+          </div>
+
+          <div class="grid-2">
+            <!-- Block 1: The One-Line Model -->
+            <article class="sub-box sub-box-accent">
+              <div class="sub-kicker kim-mono">01 // The One-Line Model</div>
+              <h3>Value-First Interviews Into Recurring Documentary Studios</h3>
+              <p>
+                Student-led documentary pods interview local founders, alumni sales leaders, and Gen Z voices, turning warm 45-minute conversations into <strong>$850 Start Small Spotlight Packs</strong> -&gt; <strong>$2,400/mo People-First Story Studios</strong> -&gt; <strong>$5,500/mo Prism Multi-Campus Syndicates</strong>.
+              </p>
+              <ul>
+                <li><strong>Why it converts:</strong> Trust is earned on camera before a commercial ask ever happens.</li>
+                <li><strong>Why students stay:</strong> Transparent 60 / 25 / 15 split pays real chapter revenue, not unpaid exposure.</li>
+                <li><strong>Why quality holds:</strong> Every cut passes 18+ written permissions, a 24-hour factual preview, and The Customer Journey Council.</li>
+              </ul>
+            </article>
+
+            <!-- Block 2: Minimum-Work Operating Compression -->
+            <article class="sub-box">
+              <div class="sub-kicker kim-mono">02 // Minimum-Work Operating Compression</div>
+              <h3>$7.5k-$12k/mo Per Pod in Under 9 Hours/Week Per Seat</h3>
+              <ul class="compression-list">
+                <li><strong>Interview-first lead gen:</strong> Zero cold sales decks; warm guest invites fill the pipeline in 3.5 BD hrs/wk.</li>
+                <li><strong>1-page paperwork:</strong> Combined 18+ guest release + fixed-scope order form eliminates legal drag.</li>
+                <li><strong>Single-setup capture:</strong> One 45-minute shoot yields 1 hero story + 6-16 vertical cuts via shared edit presets.</li>
+                <li><strong>Hard revision ceiling:</strong> 1 factual-accuracy check within 24 hours under the Release Pause Rule; zero open-ended creative re-edits.</li>
+                <li><strong>Zero invoice chasing:</strong> 100% upfront link on $850 packs; 50% upfront + Day-15 auto-bill on $2,400/mo retainers.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Block 3: Aligned Party Fast-Track (3 Entry Doors) -->
+          <div style="margin-top: 16px;">
+            <div class="sub-kicker kim-mono" style="margin-bottom: 8px;">03 // Aligned Party Fast-Track -- Three Direct Entry Doors</div>
+            <div class="grid-3">
+              <article class="brief-door-card">
+                <div class="sub-kicker kim-mono">Door A // Guest Seat ($0)</div>
+                <h3>Sit for a 45-Min Candid Interview</h3>
+                <p>Join <em>"Behind the Move"</em> or <em>"The Thing I Wish I'd Known"</em>. Share one real decision or lived turning point with local students; review every cut for accuracy before publication.</p>
+                <div class="brief-meta-line kim-mono">Timeline: 10m prep + 45m shoot + 24h preview<br />Next Step: Pick two open weekday slots</div>
+              </article>
+
+              <article class="brief-door-card is-primary-door">
+                <div class="sub-kicker kim-mono">Door B // Local Partner ($850)</div>
+                <h3>Book a Start Small Spotlight Pack</h3>
+                <p>Test Aurora with zero recurring lock-in. We film one standout leader or teammate on site and deliver <strong>1 hero story + 6 vertical clips</strong> ready for recruiting and local channels.</p>
+                <div class="brief-meta-line kim-mono">Timeline: 7-day ship (100% upfront link)<br />Next Step: Sign 1-page order form &amp; name 1 guest</div>
+              </article>
+
+              <article class="brief-door-card">
+                <div class="sub-kicker kim-mono">Door C // Chapter or Syndicate</div>
+                <h3>Found or Sponsor a Campus Chapter</h3>
+                <p>Launch a 3-to-5 student pod on your campus (charter call + 3 pilots in 14 days), or underwrite a 3-to-8 campus <strong>$5,500/mo Prism Syndicate</strong> documentary season.</p>
+                <div class="brief-meta-line kim-mono">Timeline: 60m charter call -> live in 14 days<br />Next Step: Nominate 1 host or request charter kit</div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Block 4: Adversarial Failure-Mode Guardrails (Pass 2 Hardening) -->
+          <div class="guardrails-panel">
+            <div class="guardrails-head">
+              <div>
+                <div class="sub-kicker kim-mono">04 // Adversarial Failure-Mode Guardrails (Pass 2 Hardening)</div>
+                <strong style="font-size: 13.5px;">Five structural locks preventing the #1 ways campus agencies stall or leak margin</strong>
+              </div>
+              <span class="mini-tag kim-mono">HARDENED OPS</span>
+            </div>
+            <div class="guardrails-grid">
+              <article class="guardrail-item">
+                <div class="sub-kicker kim-mono">Lock 01</div>
+                <div class="guardrail-title">Zero Invoice Chasing</div>
+                <p><strong>100% upfront payment link</strong> on $850 Start Small Packs; <strong>50% upfront + Day-15 auto-bill</strong> on $2,400/mo retainers. Never shoot unpaid commercial work.</p>
+              </article>
+              <article class="guardrail-item">
+                <div class="sub-kicker kim-mono">Lock 02</div>
+                <div class="guardrail-title">Hard Revision Ceiling</div>
+                <p><strong>1 factual-accuracy check within 24 hours</strong> per deliverable under the Release Pause Rule; zero open-ended creative re-edits.</p>
+              </article>
+              <article class="guardrail-item">
+                <div class="sub-kicker kim-mono">Lock 03</div>
+                <div class="guardrail-title">No-Show Immunity</div>
+                <p><strong>24-hour confirmation lock</strong> plus a <strong>2-person backup guest bench</strong> on campus so a reserved shoot block never goes dark.</p>
+              </article>
+              <article class="guardrail-item">
+                <div class="sub-kicker kim-mono">Lock 04</div>
+                <div class="guardrail-title">Finals-Week Continuity</div>
+                <p><strong>Cross-trained backup editor</strong> plus a <strong>2-week pre-shot buffer</strong> before exam periods so active retainers never slip.</p>
+              </article>
+              <article class="guardrail-item">
+                <div class="sub-kicker kim-mono">Lock 05</div>
+                <div class="guardrail-title">Prism Independence Lock</div>
+                <p>Commercial sponsors fund campus craft only and <strong>never buy or accelerate Customer Journey Council admission</strong>.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1151,7 +1905,7 @@
           </div>
 
           <p class="chapter-lead">
-            Grounded in Aurora's Offer Lab rule ("Less friction. More to give."), chapters never pitch vague social-media management retainers on day one. Every prospect moves through concrete, low-friction steps: editorial curiosity first, one scoped Spotlight Pack second, ongoing documentary studio third, and multi-campus syndication fourth.
+            Grounded in Aurora's Offer Lab rule ("Less friction. More to give."), chapters never pitch vague retainers on day one. Prospects move through four concrete steps: warm editorial interview, scoped Spotlight Pack, monthly documentary studio, and multi-campus syndication.
           </p>
 
           <!-- 3-Round Commercial Ladder -->
@@ -1160,15 +1914,15 @@
               <div class="sub-kicker kim-mono">Round 1 // Make It Concrete</div>
               <h3>Start Small Spotlight Pack</h3>
               <div class="offer-price kim-mono">$850</div>
-              <div class="offer-cadence kim-mono">One-time scoped pilot</div>
+              <div class="offer-cadence kim-mono">100% upfront payment link</div>
               <ul>
                 <li>1 candid 45-minute filmed interview with a founder, hiring manager, or top performer.</li>
                 <li>Edited into <strong>1 hero story + 6 vertical clips</strong> with context-rich captions.</li>
-                <li>Full participant-care factual preview window before any frame goes live.</li>
-                <li>Capped student delivery effort so margins stay healthy from Shoot #1.</li>
+                <li>1 factual-accuracy check within 24 hours (zero open-ended creative re-edits).</li>
+                <li>Paid 100% upfront before Shoot #1; capped student effort protects margin.</li>
               </ul>
               <div class="offer-tag-row kim-mono">
-                <span class="mini-tag">ATTRACT &amp; PROVE</span>
+                <span class="mini-tag">100% UPFRONT</span>
                 <span class="mini-tag">7-DAY TURNAROUND</span>
               </div>
             </article>
@@ -1177,15 +1931,15 @@
               <div class="sub-kicker kim-mono">Round 2 // Core Chapter Engine</div>
               <h3>People-First Monthly Story Studio</h3>
               <div class="offer-price kim-mono">$2,400 / mo</div>
-              <div class="offer-cadence kim-mono">Ongoing documentary studio</div>
+              <div class="offer-cadence kim-mono">50% upfront + Day-15 auto-bill</div>
               <ul>
-                <li>Built for regional employers, recruiting teams, hospitality groups, and local consumer brands.</li>
+                <li>Built for regional employers, recruiting teams, hospitality groups, and local brands.</li>
                 <li><strong>2 on-site shoots + 16 edited cuts</strong> per month featuring real team members and customers.</li>
-                <li>End-to-end guest care, 18+ written permissions, distribution, and respectful comment moderation.</li>
-                <li>Clean stopping point each quarter: no surprise auto-locks or punitive clauses.</li>
+                <li>End-to-end guest care, 18+ written permissions, 24-hour factual check, and comment moderation.</li>
+                <li>2-week pre-shot buffer ahead of campus finals; clean quarterly stopping point with zero lock-in.</li>
               </ul>
               <div class="offer-tag-row kim-mono">
-                <span class="mini-tag">RECURRING CORE</span>
+                <span class="mini-tag">50% + DAY-15 BILL</span>
                 <span class="mini-tag">16 CUTS / MO</span>
               </div>
             </article>
@@ -1261,11 +2015,11 @@ Hi [First Name],
 
 Thank you again for being so candid during your "Behind the Move" session -- the clips are getting strong saves and real questions from [Campus Name] juniors and seniors.
 
-Since your team already saw how comfortable our interview process is, we also run a scoped Start Small Spotlight Pack ($850 one-time): one 45-minute shoot spotlighting a standout manager or teammate, delivered as 1 hero story + 6 vertical clips you own for recruiting and local channels.
+Since your team already saw how comfortable our interview process is, we also run a scoped Start Small Spotlight Pack ($850 one-time, 100% upfront link before Shoot #1): one 45-minute shoot spotlighting a standout manager or teammate, delivered in 7 days as 1 hero story + 6 vertical clips with a 24-hour factual preview.
 
-If that proves useful, our regional partners move into the People-First Monthly Story Studio ($2,400/mo for 2 shoots and 16 monthly cuts with full guest care and distribution).
+If that proves useful, our regional partners move into the People-First Monthly Story Studio ($2,400/mo, 50% upfront + Day-15 auto-bill, for 2 shoots and 16 monthly cuts with full guest care and distribution).
 
-Want to pick one teammate for a $850 Start Small pilot next month, or run a quick 15-minute discovery call to map Q2?
+Want to pick one teammate for an $850 Start Small pilot next month, or run a quick 15-minute discovery call to map Q2?
 
 Best,
 [Your Name] // Aurora [Campus Name]</pre>
@@ -1284,9 +2038,9 @@ Best,
               <pre class="script-pre kim-mono" id="script-agenda-text">AURORA 15-MINUTE DISCOVERY AGENDA
 00:00 - 03:00 | Context Check: What is the single hardest trust or recruiting gap in your local market right now?
 03:00 - 07:00 | People Map: Who on your team has real lived stories customers or future grads actually respect?
-07:00 - 11:00 | Scope Match: Recommend ONE concrete start -- Round 1 ($850 Spotlight Pack) vs Round 2 ($2,400/mo Story Studio). Never oversell before proof.
-11:00 - 13:00 | Participant Care &amp; Review: Confirm 18+ written permissions, factual sign-off window, and our Release Pause Rule.
-13:00 - 15:00 | One Next Step: Lock first 45-minute shoot date or agree on a clear no -- zero follow-up spam.</pre>
+07:00 - 11:00 | Scope Match: Recommend ONE concrete start -- Round 1 ($850 Spotlight Pack, 100% upfront) vs Round 2 ($2,400/mo Story Studio, 50% upfront + Day-15 auto-bill). Never shoot unpaid commercial work.
+11:00 - 13:00 | Guardrails &amp; Care: Confirm 18+ written permissions, 1 factual check within 24 hours (no open-ended re-edits), 24-hour shoot confirmation lock, and Release Pause Rule.
+13:00 - 15:00 | One Next Step: Send 1-page order form + payment link and lock Shoot #1, or agree on a clear no.</pre>
             </div>
           </div>
 
@@ -1388,8 +2142,8 @@ Best,
 
             <article class="sub-box">
               <div class="sub-kicker kim-mono">Continuity Protocol</div>
-              <h3>Semester-to-Semester Handoff</h3>
-              <p>Quality compounds instead of resetting every May through a mandatory <strong>Shadow Semester</strong>: every junior/senior role lead recruits a freshman/sophomore apprentice by Week 6, co-produces 2 shoots together, and hands over a clean client &amp; permission ledger before finals.</p>
+              <h3>Finals-Week &amp; Semester Handoff</h3>
+              <p>Quality compounds instead of resetting every May through a mandatory <strong>Shadow Semester</strong>: every lead recruits an apprentice by Week 6, cross-trains a <strong>backup editor</strong>, films a <strong>2-week pre-shot buffer</strong> before exam periods, and hands over a clean client &amp; permission ledger.</p>
             </article>
           </div>
         </div>
@@ -1558,7 +2312,7 @@ Best,
                   <label for="calc-r2">Round 2: Monthly Story Retainers / chapter ($2,400/mo)</label>
                   <span class="slider-val kim-mono" id="val-r2">2 active</span>
                 </div>
-                <input type="range" id="calc-r2" min="1" max="8" step="1" value="2" />
+                <input type="range" id="calc-r2" min="0" max="8" step="1" value="2" />
                 <div class="slider-hint">2 shoots + 16 cuts/mo for local employers &amp; regional brands</div>
               </div>
 
@@ -1724,6 +2478,716 @@ Best,
                 <li class="check-item"><label><input type="checkbox" data-check-id="d4-campus2" data-phase="4" /><span>Dispatch a traveling Producer to run Campus #2's founding charter meeting and first 3 warm shoots.</span></label></li>
               </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 07: TEAM BLOG TIMELINE (CHRONOLOGICAL STUDIO DISPATCHES) -->
+      <section class="kim-card" id="ch-07" data-card-id="ch-07" data-card-medium="charcoal" data-take="1">
+        <canvas class="kim-card-canvas" aria-hidden="true"></canvas>
+        <div class="kim-card-inner">
+          <div class="chapter-head">
+            <div>
+              <div class="chapter-kicker kim-mono">07 // STUDIO FIELD LOG</div>
+              <h2 class="chapter-title kim-display">Team Blog Timeline: Chronological Studio Dispatches</h2>
+            </div>
+            <span class="kim-badge kim-mono card-med-tag">002 CHARCOAL</span>
+          </div>
+
+          <p class="chapter-lead">
+            Six chronological chapter dispatches tracking how a founding pod moves from Charter Night to multi-campus replication. Filter by build status and expand any dispatch for concrete operating notes.
+          </p>
+
+          <div class="timeline-toolbar">
+            <div class="timeline-filters" role="group" aria-label="Filter studio dispatches by status">
+              <button type="button" class="kim-btn kim-btn-active dispatch-filter-btn" data-dispatch-filter="all" aria-pressed="true">All (6)</button>
+              <button type="button" class="kim-btn dispatch-filter-btn" data-dispatch-filter="live" aria-pressed="false">Live Now (2)</button>
+              <button type="button" class="kim-btn dispatch-filter-btn" data-dispatch-filter="active" aria-pressed="false">Active Build (2)</button>
+              <button type="button" class="kim-btn dispatch-filter-btn" data-dispatch-filter="next" aria-pressed="false">Next Wave (2)</button>
+            </div>
+            <div class="timeline-count kim-mono" id="dispatch-visible-count">Showing 6 of 6 dispatches</div>
+          </div>
+
+          <div class="timeline-stream" id="dispatch-timeline">
+            <!-- A01 -->
+            <article class="dispatch-card" data-dispatch-status="live">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A01 // Week 1-2</div>
+                  <h3 class="dispatch-title">Charter Night, 18+ Permission Kit &amp; First 3 Candid Campus Interviews</h3>
+                </div>
+                <span class="status-pill status-live kim-mono">Live Now</span>
+              </div>
+              <p class="dispatch-summary">
+                Three founding students lock all five charter roles, cap initial out-of-pocket gear spend in writing, assemble the 1-page 18+ release kit, and film three proof-of-craft interviews across campus.
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">60-MIN CHARTER</span>
+                <span class="mini-tag">18+ RELEASE KIT</span>
+                <span class="mini-tag">3 PILOT EPISODES</span>
+                <span class="mini-tag">ZERO AD SPEND</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> Signed 1-page Founding Charter with weekly seat hours (&lt;9 hrs/wk), dual wireless lav audio check, 3 published pilots (2 <em>Still Figuring It Out.</em> + 1 <em>Show Your Work.</em>), and the chapter's first Release Pause Rule audit log.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Do not touch custom branding or fancy studio rentals yet. Clean audio in a quiet sunlit room beats cinematic gear with muddy sound every single time. Every pilot guest gets a 24-hour factual preview before upload.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+
+            <!-- A02 -->
+            <article class="dispatch-card" data-dispatch-status="live">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A02 // Week 3-4</div>
+                  <h3 class="dispatch-title">Closing 3 Start Small Spotlight Packs ($2,550 Collected via Warm Guests)</h3>
+                </div>
+                <span class="status-pill status-live kim-mono">Live Now</span>
+              </div>
+              <p class="dispatch-summary">
+                Using the 3 campus pilots as living proof, the pod invites 15 local founders and alumni sales leaders onto "Behind the Move" and converts 3 warm guests into scoped $850 Start Small Spotlight Packs.
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">$2,550 COLLECTED</span>
+                <span class="mini-tag">3 X $850 PACKS</span>
+                <span class="mini-tag">7-DAY DELIVERY</span>
+                <span class="mini-tag">WARM WEDGE</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> 20-name local alumni/operator list within 15 miles, 6 candid editorial interviews filmed, 3 paid Round 1 Spotlight Packs delivered (each containing 1 hero story + 6 vertical cuts), and the chapter's first 60 / 25 / 15 payout ledger.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Never pitch during the interview itself. Deliver finished editorial clips first, let the guest share them, then close the $850 Spotlight Pack on a 1-page order form with a <strong>100% upfront payment link</strong> before Shoot #1. Never shoot unpaid commercial work.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+
+            <!-- A03 -->
+            <article class="dispatch-card" data-dispatch-status="active">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A03 // Month 2</div>
+                  <h3 class="dispatch-title">Launching "The Thing I Wish I'd Known" &amp; "Behind the Move" Local Feeds</h3>
+                </div>
+                <span class="status-pill status-active kim-mono">Active Build</span>
+              </div>
+              <p class="dispatch-summary">
+                Establish predictable twice-weekly campus publishing cadences with shared caption presets, verified participant credits, and active comment moderation so local saves and shares compound organically.
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">2X/WK CADENCE</span>
+                <span class="mini-tag">SHARED EDIT PRESETS</span>
+                <span class="mini-tag">COMMENT CARE</span>
+                <span class="mini-tag">LOCAL CREDITS</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> Standard caption template pack (1-click export across all editors), 16 published vertical cuts per month across both signature formats, and a weekly 20-minute comment-care review led by the Publishing Lead.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Track saves, shares, and inbound student questions rather than chasing hollow vanity reach. Keep context and limits attached to every piece of advice so clips earn trust with both seniors and employers.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+
+            <!-- A04 -->
+            <article class="dispatch-card" data-dispatch-status="active">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A04 // Month 2-3</div>
+                  <h3 class="dispatch-title">Converting Employer &amp; Founder Guests into $2,400/mo Story Retainers</h3>
+                </div>
+                <span class="status-pill status-active kim-mono">Active Build</span>
+              </div>
+              <p class="dispatch-summary">
+                Review 30-day clip outcomes with Spotlight Pack buyers and transition 2-3 satisfied local partners into Round 2 People-First Monthly Story Studios ($2,400/mo, 50% upfront + Day-15 auto-bill, clean quarterly exit).
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">$2,400/MO RETAINERS</span>
+                <span class="mini-tag">50% + DAY-15 AUTO-BILL</span>
+                <span class="mini-tag">2 SHOOTS + 16 CUTS</span>
+                <span class="mini-tag">QUARTERLY STOP POINT</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> 1-page 30-day outcome snapshot (saves, shares, inbound student DMs/applications), 15-minute scope match calls, and 2-3 active Round 2 retainers bringing monthly chapter revenue into the $7.5k-$12k/mo target band.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Lock both shoot dates on the 1st, enforce a 24-hour guest confirmation lock + 2-person campus backup bench, and cap review at 1 factual check within 24 hours so seats stay under 9 hrs/wk.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+
+            <!-- A05 -->
+            <article class="dispatch-card" data-dispatch-status="next">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A05 // Semester End</div>
+                  <h3 class="dispatch-title">First Customer Journey Council Review &amp; Shadow-Semester Handoff</h3>
+                </div>
+                <span class="status-pill status-next kim-mono">Next Wave</span>
+              </div>
+              <p class="dispatch-summary">
+                Submit the chapter's 6-episode quality dossier for Customer Journey Council peer audit and graduate freshman/sophomore shadow apprentices into full core seats before finals week.
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">COUNCIL PEER REVIEW</span>
+                <span class="mini-tag">SHADOW APPRENTICES</span>
+                <span class="mini-tag">PERMISSION AUDIT</span>
+                <span class="mini-tag">ZERO MAY RESET</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> 6-episode dossier (raw permissions, factual sign-off timestamps, guest satisfaction notes), Council certification badge unlocking Round 3 eligibility, and complete client/gear ledger handoff to next semester's pod leads.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Every graduating lead must co-produce at least 2 live client shoots alongside their shadow apprentice before stepping back. Commercial sponsors never sit on or influence Council peer-review decisions.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+
+            <!-- A06 -->
+            <article class="dispatch-card" data-dispatch-status="next">
+              <div class="dispatch-head">
+                <div>
+                  <div class="sub-kicker kim-mono">A06 // Quarter 3</div>
+                  <h3 class="dispatch-title">Alumni-Graph Replication: Seeding Campuses 02-08 with Traveling Producers</h3>
+                </div>
+                <span class="status-pill status-next kim-mono">Next Wave</span>
+              </div>
+              <p class="dispatch-summary">
+                Tap warm peer nominations from satisfied Round 2 guests to launch Campuses 02-08, dispatching trained traveling Producers funded by the 15% Kit &amp; Prism Reserve to run each new chapter's first 3 shoots.
+              </p>
+              <div class="dispatch-tags kim-mono">
+                <span class="mini-tag">CAMPUSES 02-08</span>
+                <span class="mini-tag">TRAVELING PRODUCER</span>
+                <span class="mini-tag">$5,500/MO SYNDICATE</span>
+                <span class="mini-tag">ALUMNI GRAPH</span>
+              </div>
+              <details class="obj-item dispatch-details">
+                <summary>Read Full Studio Dispatch</summary>
+                <div class="obj-body">
+                  <div class="dispatch-notes">
+                    <div class="dispatch-note-block">
+                      <strong>What Ships This Sprint:</strong> 2 warm operator nominations per Round 2 partner, 48-hour on-site kickoff sprint by a traveling Producer from Campus 01, shared Six-Act Journey playbook handoff, and first multi-campus $5,500/mo Prism Syndicate season.
+                    </div>
+                    <div class="dispatch-note-block">
+                      <strong>Operating Discipline:</strong> Never open a new campus cold without at least 2 warm local operator introductions and 3 vetted student co-founders already committed to Charter Night.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 08: RECRUITING MATERIALS & INTERACTIVE CANDIDATE PIPELINE -->
+      <section class="kim-card" id="ch-08" data-card-id="ch-08" data-card-medium="pixel" data-take="1">
+        <canvas class="kim-card-canvas" aria-hidden="true"></canvas>
+        <div class="kim-card-inner">
+          <div class="chapter-head">
+            <div>
+              <div class="chapter-kicker kim-mono">08 // TALENT &amp; CHAPTER GROWTH</div>
+              <h2 class="chapter-title kim-display">Recruiting Materials, Craft Auditions &amp; Candidate Pipeline</h2>
+            </div>
+            <span class="kim-badge kim-mono card-med-tag">007 PIXEL</span>
+          </div>
+
+          <p class="chapter-lead">
+            Aurora recruits curious listeners, documentary shooters, clean editors, and organized producers -- never clout chasers or hype ambassadors. Every seat is paid out of collected chapter revenue (60 / 25 / 15 split) with real bylines and capped weekly hours.
+          </p>
+
+          <!-- Copy-Pasteable Recruiting Kit -->
+          <div class="sub-kicker kim-mono">Part A // Copy-Pasteable Aurora Campus Recruiting Kit</div>
+          <div class="tab-row" role="tablist" aria-label="Aurora Campus Recruiting Scripts" style="margin-top: 8px;">
+            <button type="button" class="kim-btn kim-btn-active recruit-tab-btn" role="tab" aria-selected="true" data-recruit-tab="flyer">1. Campus Flyer / Group-Chat Callout</button>
+            <button type="button" class="kim-btn recruit-tab-btn" role="tab" aria-selected="false" data-recruit-tab="dm">2. Direct Student DM Script</button>
+            <button type="button" class="kim-btn recruit-tab-btn" role="tab" aria-selected="false" data-recruit-tab="pitch">3. 60-Second Org / Class Pitch</button>
+          </div>
+
+          <div class="tab-panel active" id="recruit-panel-flyer">
+            <div class="script-card">
+              <div class="script-head">
+                <div>
+                  <div class="sub-kicker kim-mono">Group-Chat &amp; Bulletin Board Copy</div>
+                  <strong>Short Campus Recruiting Callout (Zero Hype, Paid Revenue Split)</strong>
+                </div>
+                <button type="button" class="kim-btn copy-script-btn" data-copy-target="recruit-flyer-text">Copy Callout</button>
+              </div>
+              <pre class="script-pre kim-mono" id="recruit-flyer-text">AURORA [CAMPUS NAME] // NOW RECRUITING 4 CORE STUDIO SEATS
+
+We are building an interview-led documentary media pod on campus: candid 45-minute conversations with local founders, alumni sales leaders, and real students figuring out adulthood.
+
+Who we want (no clout chasing, no unpaid ambassador gimmicks):
+- Curious Interviewers (Editorial Lead) who listen better than they talk
+- Documentary Shooters (Production Lead) who care about clean wireless audio + natural light
+- Story Editors (Editor) who cut honest, readable 45-second vertical stories
+- Student Producers (Producer) who run schedules, guest care, and warm client handoffs
+
+How it works:
+- Paid directly out of collected studio revenue (60% Chapter Pod pool, transparent ledger)
+- Real documentary credits, operator network access, and &lt;9 hrs/week during the semester
+- 30-minute practical craft audition -- no 5-page cover letters
+
+Reply "AURORA" or DM [Handle/Name] with the 1 role you want to audition for this week.</pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="recruit-panel-dm">
+            <div class="script-card">
+              <div class="script-head">
+                <div>
+                  <div class="sub-kicker kim-mono">1-on-1 Outreach // Journalism, Film, Business &amp; Sales Clubs</div>
+                  <strong>Direct DM Script for High-Craft Students</strong>
+                </div>
+                <button type="button" class="kim-btn copy-script-btn" data-copy-target="recruit-dm-text">Copy DM</button>
+              </div>
+              <pre class="script-pre kim-mono" id="recruit-dm-text">Hey [First Name] -- saw your [short film / campus paper piece / sales club session] and loved how clear and grounded your work was.
+
+I am helping launch the [Campus Name] pod of Aurora, a student-run interview studio that films candid stories with local founders, alumni leaders, and Gen Z voices. Local businesses pay for scoped Spotlight Packs ($850) and monthly story studios ($2,400/mo), and 60% of collected revenue goes straight to the student pod doing the work.
+
+We are looking for a [Editorial Lead / Producer / Production Lead / Editor] who wants real paid portfolio work (&lt;9 hrs/wk, zero cheesy promo scripts).
+
+Open to a 15-minute coffee chat this week so I can show you 2 sample cuts and our 30-minute paid trial audition?</pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="recruit-panel-pitch">
+            <div class="script-card">
+              <div class="script-head">
+                <div>
+                  <div class="sub-kicker kim-mono">Live Announcement // 60 Seconds Flat</div>
+                  <strong>Organization Meeting &amp; Classroom Pitch Script</strong>
+                </div>
+                <button type="button" class="kim-btn copy-script-btn" data-copy-target="recruit-pitch-text">Copy Pitch</button>
+              </div>
+              <pre class="script-pre kim-mono" id="recruit-pitch-text">AURORA 60-SECOND CLASS / CLUB PITCH
+
+[0:00 - 0:15 | The Gap]
+Most campus media either runs unpaid for pure exposure or asks students to post awkward brand-ambassador promos nobody watches.
+
+[0:15 - 0:30 | What Aurora Does]
+We run the [Campus Name] chapter of Aurora -- an interview-led documentary studio. We sit down with local founders, alumni sales leaders, and everyday students for honest 45-minute conversations, then turn that craft into paid $850 Spotlight Packs and $2,400/mo documentary retainers for local employers.
+
+[0:30 - 0:45 | The Deal]
+60% of every collected dollar stays with the student pod. We cap weekly commitment under 9 hours, publish transparent credits, and protect every guest with written 18+ permissions and factual preview review.
+
+[0:45 - 1:00 | Call to Action]
+If you interview, shoot, edit, or produce, grab me right after this meeting. We do a 15-minute curious chat and a 30-minute practical craft audition this week -- no resume spam.</pre>
+            </div>
+          </div>
+
+          <!-- Role Scorecards & 30-Minute Practical Craft Auditions -->
+          <div style="margin-top: 18px;">
+            <div class="sub-kicker kim-mono" style="margin-bottom: 8px;">Part B // Role Scorecards &amp; 30-Minute Practical Craft Auditions</div>
+            <div class="grid-4">
+              <article class="sub-box">
+                <div class="sub-kicker kim-mono">Audition 01 // Editorial Lead</div>
+                <h3>10-Min Candid Interview Clip Test</h3>
+                <p>Run a live 10-minute unscripted conversation with a peer about one hard decision they made this year.</p>
+                <ul>
+                  <li><strong>Pass bar:</strong> Guest talks 75%+ of the time; at least 3 sharp follow-up questions; zero leading hype prompts.</li>
+                  <li><strong>Output:</strong> 1 honest moment with context and limits intact.</li>
+                </ul>
+              </article>
+
+              <article class="sub-box">
+                <div class="sub-kicker kim-mono">Audition 02 // Producer</div>
+                <h3>3-Point Guest-Care Checklist Drill</h3>
+                <p>Walk a mock guest from booking confirmation through post-shoot sign-off in 30 minutes.</p>
+                <ul>
+                  <li><strong>Pass bar:</strong> Verifies 18+ written release, schedules exact 24-hour factual preview, and correctly executes a simulated Release Pause Rule hold.</li>
+                  <li><strong>Output:</strong> Zero-friction guest dossier + shoot sheet.</li>
+                </ul>
+              </article>
+
+              <article class="sub-box">
+                <div class="sub-kicker kim-mono">Audition 03 // Editor</div>
+                <h3>45-Sec Clean-Caption Cut Test</h3>
+                <p>Cut a 45-second vertical story from a provided 6-minute raw interview clip using Aurora's shared edit presets.</p>
+                <ul>
+                  <li><strong>Pass bar:</strong> Honest pacing with zero meaning distortion, clean audio leveling, accurate high-contrast captions, exported on time.</li>
+                  <li><strong>Finals buffer:</strong> Cross-trains a shadow backup editor so exam weeks never stall delivery.</li>
+                </ul>
+              </article>
+
+              <article class="sub-box">
+                <div class="sub-kicker kim-mono">Audition 04 // Production Lead</div>
+                <h3>Audio &amp; Natural-Light Framing Test</h3>
+                <p>Set up a 2-mic interview in a real campus hallway or office corner within 8 minutes.</p>
+                <ul>
+                  <li><strong>Pass bar:</strong> Clean dual wireless lavs (-12dB peaks, zero clothing rustle), flattering eye-line framing, tidy cable discipline, 5-minute tear-down.</li>
+                  <li><strong>Output:</strong> 60-second clean test roll.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <!-- Interactive 5-Stage Recruiting Pipeline Tracker -->
+          <div class="pipe-header">
+            <div>
+              <div class="sub-kicker kim-mono">Part C // Interactive 5-Stage Recruiting Pipeline Tracker (Saved Locally)</div>
+              <strong style="font-size: 14px;">Track live chapter candidate flow and stage-to-stage conversion health</strong>
+            </div>
+            <button type="button" class="kim-btn" id="reset-recruit-pipe-btn">Reset Pipeline</button>
+          </div>
+
+          <div class="pipe-grid" id="recruit-pipeline-grid">
+            <div class="pipe-stage" data-pipe-stage="nominated">
+              <div class="sub-kicker kim-mono">Stage 01</div>
+              <div class="pipe-stage-name">Nominated</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-pipe-target="nominated" data-pipe-delta="-1" aria-label="Decrease Nominated count">-</button>
+                <span class="pipe-count kim-mono" id="pipe-count-nominated">24</span>
+                <button type="button" class="pipe-step-btn" data-pipe-target="nominated" data-pipe-delta="1" aria-label="Increase Nominated count">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="pipe-rate-nominated">100% of top</div>
+              <div class="pipe-bench">Target: 6 warm peer/club nominations per week</div>
+            </div>
+
+            <div class="pipe-stage" data-pipe-stage="chat">
+              <div class="sub-kicker kim-mono">Stage 02</div>
+              <div class="pipe-stage-name">15-Min Curious Chat</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-pipe-target="chat" data-pipe-delta="-1" aria-label="Decrease Curious Chat count">-</button>
+                <span class="pipe-count kim-mono" id="pipe-count-chat">14</span>
+                <button type="button" class="pipe-step-btn" data-pipe-target="chat" data-pipe-delta="1" aria-label="Increase Curious Chat count">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="pipe-rate-chat">58% from S1</div>
+              <div class="pipe-bench">Target: 3 coffee/Zoom chats/wk (50%+ pass)</div>
+            </div>
+
+            <div class="pipe-stage" data-pipe-stage="trial">
+              <div class="sub-kicker kim-mono">Stage 03</div>
+              <div class="pipe-stage-name">Paid Trial Interview</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-pipe-target="trial" data-pipe-delta="-1" aria-label="Decrease Paid Trial count">-</button>
+                <span class="pipe-count kim-mono" id="pipe-count-trial">7</span>
+                <button type="button" class="pipe-step-btn" data-pipe-target="trial" data-pipe-delta="1" aria-label="Increase Paid Trial count">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="pipe-rate-trial">50% from S2</div>
+              <div class="pipe-bench">Target: 1-2 craft auditions/wk (30m test)</div>
+            </div>
+
+            <div class="pipe-stage" data-pipe-stage="shadow">
+              <div class="sub-kicker kim-mono">Stage 04</div>
+              <div class="pipe-stage-name">Shadow Semester</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-pipe-target="shadow" data-pipe-delta="-1" aria-label="Decrease Shadow Semester count">-</button>
+                <span class="pipe-count kim-mono" id="pipe-count-shadow">4</span>
+                <button type="button" class="pipe-step-btn" data-pipe-target="shadow" data-pipe-delta="1" aria-label="Increase Shadow Semester count">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="pipe-rate-shadow">57% from S3</div>
+              <div class="pipe-bench">Target: 2+ sophomore shadows active per term</div>
+            </div>
+
+            <div class="pipe-stage is-final" data-pipe-stage="core">
+              <div class="sub-kicker kim-mono">Stage 05</div>
+              <div class="pipe-stage-name">Core Chapter Seat</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-pipe-target="core" data-pipe-delta="-1" aria-label="Decrease Core Chapter Seat count">-</button>
+                <span class="pipe-count kim-mono" id="pipe-count-core">3</span>
+                <button type="button" class="pipe-step-btn" data-pipe-target="core" data-pipe-delta="1" aria-label="Increase Core Chapter Seat count">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="pipe-rate-core">75% from S4</div>
+              <div class="pipe-bench">Target: 3-5 core charter owners per pod</div>
+            </div>
+          </div>
+
+          <div class="pipe-summary-bar">
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Overall Yield (S1 -&gt; S5)</div>
+              <div class="kpi-num kim-mono" id="pipe-overall-rate">12.5%</div>
+              <div class="kpi-sub">Benchmark: 10% to 18% selective yield</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Audition Pass Rate (S3 -&gt; S4)</div>
+              <div class="kpi-num kim-mono" id="pipe-audition-rate">57.1%</div>
+              <div class="kpi-sub">Practical craft bar stays high</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Active Pod Bench (S4 + S5)</div>
+              <div class="kpi-num kim-mono" id="pipe-bench-total">7 seats</div>
+              <div class="kpi-sub">Core leads + shadow apprentices</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Weekly Intake Health</div>
+              <div class="kpi-num kim-mono" id="pipe-health-status">HEALTHY</div>
+              <div class="kpi-sub" id="pipe-health-sub">Continuity covered for next semester</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 09: END-TO-END SALES FLOW & INTERVIEW-TO-RETAINER ENGINE -->
+      <section class="kim-card" id="ch-09" data-card-id="ch-09" data-card-medium="sumi-ink" data-take="1">
+        <canvas class="kim-card-canvas" aria-hidden="true"></canvas>
+        <div class="kim-card-inner">
+          <div class="chapter-head">
+            <div>
+              <div class="chapter-kicker kim-mono">09 // END-TO-END REVENUE ENGINE</div>
+              <h2 class="chapter-title kim-display">Sales Flow Diagram, 3.5-Hr BD Rhythm &amp; Deal Funnel Tracker</h2>
+            </div>
+            <span class="kim-badge kim-mono card-med-tag">005 SUMI-INK</span>
+          </div>
+
+          <p class="chapter-lead">
+            The complete organic revenue path from first warm interview invitation to multi-campus syndicate -- engineered to run on 3.5 focused BD hours per week with zero cold-calling spam.
+          </p>
+
+          <!-- Crisp Inline SVG 7-Step Sales Flow Diagram -->
+          <div class="sub-kicker kim-mono">Part A // 7-Step Organic Interview-to-Retainer Flow</div>
+          <div class="diagram-wrap">
+            <svg viewBox="0 0 920 264" role="img" aria-label="7-step Aurora organic sales flow from Warm Guest Invite through 45-Min Candid Interview, 24-Hr Factual Preview, Clip Delivery plus Team Reactions, 850 dollar Start Small Spotlight, 2400 dollar monthly Story Studio Retainer, to 5500 dollar monthly Prism Campus Syndicate">
+              <defs>
+                <linearGradient id="salesFlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--card-accent, #D03A2B)" />
+                  <stop offset="50%" stop-color="var(--card-accent2, #3C5A78)" />
+                  <stop offset="100%" stop-color="var(--card-accent, #D03A2B)" />
+                </linearGradient>
+                <marker id="salesArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--card-accent, #D03A2B)" />
+                </marker>
+              </defs>
+
+              <!-- Row 1 Connectors (Steps 1 -> 2 -> 3 -> 4) -->
+              <g fill="none" stroke="url(#salesFlowGrad)" stroke-width="2.4" stroke-linecap="round">
+                <path d="M214 62 L236 62" marker-end="url(#salesArrow)" />
+                <path d="M442 62 L464 62" marker-end="url(#salesArrow)" />
+                <path d="M670 62 L692 62" marker-end="url(#salesArrow)" />
+                <!-- Serpentine drop from Step 4 down to Step 5 -->
+                <path d="M800 108 L800 128 L120 128 L120 144" marker-end="url(#salesArrow)" />
+                <!-- Row 2 Connectors (Steps 5 -> 6 -> 7) -->
+                <path d="M294 196 L326 196" marker-end="url(#salesArrow)" />
+                <path d="M588 196 L620 196" marker-end="url(#salesArrow)" />
+              </g>
+
+              <!-- Step 1 -->
+              <rect x="12" y="18" width="200" height="88" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-ink, #141210)" stroke-width="2" />
+              <text x="24" y="38" fill="var(--card-accent, #D03A2B)" font-family="monospace" font-size="10" font-weight="800">STEP 01 // $0 WEDGE</text>
+              <text x="24" y="58" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="12.5" font-weight="900">Warm Guest Invite</text>
+              <text x="24" y="76" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">5 warm alumni / founder</text>
+              <text x="24" y="91" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">invites sent every Monday</text>
+
+              <!-- Step 2 -->
+              <rect x="240" y="18" width="200" height="88" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-ink, #141210)" stroke-width="2" />
+              <text x="252" y="38" fill="var(--card-accent2, #3C5A78)" font-family="monospace" font-size="10" font-weight="800">STEP 02 // CAPTURE</text>
+              <text x="252" y="58" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="12.5" font-weight="900">45-Min Candid Interview</text>
+              <text x="252" y="76" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">Single setup, 18+ release,</text>
+              <text x="252" y="91" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">zero teleprompter friction</text>
+
+              <!-- Step 3 -->
+              <rect x="468" y="18" width="200" height="88" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-ink, #141210)" stroke-width="2" />
+              <text x="480" y="38" fill="var(--card-accent2, #3C5A78)" font-family="monospace" font-size="10" font-weight="800">STEP 03 // CARE GATE</text>
+              <text x="480" y="58" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="12.5" font-weight="900">24-Hr Factual Preview</text>
+              <text x="480" y="76" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">Written accuracy sign-off</text>
+              <text x="480" y="91" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">&amp; Release Pause Rule</text>
+
+              <!-- Step 4 -->
+              <rect x="696" y="18" width="212" height="88" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-ink, #141210)" stroke-width="2" />
+              <text x="708" y="38" fill="var(--card-accent, #D03A2B)" font-family="monospace" font-size="10" font-weight="800">STEP 04 // PROOF SIGNAL</text>
+              <text x="708" y="58" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="12.5" font-weight="900">Clip Delivery + Reactions</text>
+              <text x="708" y="76" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">Guest shares clips; team &amp;</text>
+              <text x="708" y="91" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">students react organically</text>
+
+              <!-- Step 5 -->
+              <rect x="12" y="148" width="280" height="96" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-accent, #D03A2B)" stroke-width="2.2" />
+              <text x="26" y="169" fill="var(--card-accent, #D03A2B)" font-family="monospace" font-size="10" font-weight="800">STEP 05 // ROUND 1 PILOT</text>
+              <text x="26" y="191" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="14" font-weight="900">$850 Start Small Spotlight</text>
+              <text x="26" y="211" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">100% upfront link: 1 hero + 6 vertical</text>
+              <text x="26" y="226" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">cuts shipped in 7 days (~33% close)</text>
+
+              <!-- Step 6 -->
+              <rect x="330" y="148" width="256" height="96" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-accent, #D03A2B)" stroke-width="2.4" />
+              <text x="344" y="169" fill="var(--card-accent, #D03A2B)" font-family="monospace" font-size="10" font-weight="800">STEP 06 // ROUND 2 CORE</text>
+              <text x="344" y="191" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="14" font-weight="900">$2,400/mo Story Retainer</text>
+              <text x="344" y="211" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">2 shoots + 16 cuts/mo; 50% upfront</text>
+              <text x="344" y="226" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">+ Day-15 auto-bill; clean quarterly exit</text>
+
+              <!-- Step 7 -->
+              <rect x="624" y="148" width="284" height="96" rx="4" fill="var(--card-well, #E9E3D5)" stroke="var(--card-accent2, #3C5A78)" stroke-width="2.2" />
+              <text x="638" y="169" fill="var(--card-accent2, #3C5A78)" font-family="monospace" font-size="10" font-weight="800">STEP 07 // ROUND 3 NETWORK</text>
+              <text x="638" y="191" fill="var(--card-ink, #141210)" font-family="sans-serif" font-size="14" font-weight="900">$5,500/mo Prism Syndicate</text>
+              <text x="638" y="211" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">3-to-8 campus original seasons funded</text>
+              <text x="638" y="226" fill="var(--card-muted, #59534B)" font-family="sans-serif" font-size="10.5">under Customer Journey Council review</text>
+            </svg>
+          </div>
+
+          <!-- Minimum-Work Weekly BD Rhythm Table -->
+          <div class="sub-kicker kim-mono">Part B // Minimum-Work Weekly BD Rhythm (3.5 Hours / Week Total)</div>
+          <div class="rhythm-table-wrap">
+            <table class="rhythm-table">
+              <thead>
+                <tr class="kim-mono">
+                  <th>Day</th>
+                  <th>Time Box</th>
+                  <th>Owner</th>
+                  <th>Exact Minimum-Work Action</th>
+                  <th>Weekly Output Target</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="kim-mono"><strong>Monday</strong></td>
+                  <td class="kim-mono">0.75 hr</td>
+                  <td>Editorial &amp; BD Lead</td>
+                  <td>Send 5 personalized Warm Interview Invitations (alumni founders, local sales leaders, hiring managers) using Script #1.</td>
+                  <td>5 warm invites -&gt; 2 booked shoots</td>
+                </tr>
+                <tr>
+                  <td class="kim-mono"><strong>Wednesday</strong></td>
+                  <td class="kim-mono">1.50 hrs</td>
+                  <td>Host + Production</td>
+                  <td>Record 2 candid 45-minute interviews back-to-back (24-hr confirmation lock + 2-person campus backup bench); sign 18+ releases on site.</td>
+                  <td>2 raw sessions -&gt; 14+ vertical cuts</td>
+                </tr>
+                <tr>
+                  <td class="kim-mono"><strong>Thursday</strong></td>
+                  <td class="kim-mono">0.75 hr</td>
+                  <td>Producer</td>
+                  <td>Send 24-hour preview links (1 factual check, zero creative re-edits), log written approvals, and run brief clip-reaction check-ins.</td>
+                  <td>100% factual sign-off + warm expansion cues</td>
+                </tr>
+                <tr>
+                  <td class="kim-mono"><strong>Friday</strong></td>
+                  <td class="kim-mono">0.50 hr</td>
+                  <td>BD Originator</td>
+                  <td>Send 1-page $850 Start Small links (100% upfront) or $2,400/mo retainers (50% upfront + Day-15 auto-bill) to warm guests ready to move.</td>
+                  <td>Paid upfront closes + clean ledger update</td>
+                </tr>
+                <tr class="kim-mono">
+                  <td>WEEKLY TOTAL</td>
+                  <td>3.50 hrs</td>
+                  <td>Lean Pod</td>
+                  <td>Zero cold pitch decks, zero unpaid commercial shoots, zero open-ended revision loops.</td>
+                  <td>8 shoots/mo -&gt; $7.5k-$12k/mo pod capacity</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Interactive Deal Funnel & Revenue Velocity Tracker -->
+          <div class="pipe-header">
+            <div>
+              <div class="sub-kicker kim-mono">Part C // Interactive Deal Funnel &amp; 30-Day Revenue Velocity Tracker (Saved Locally)</div>
+              <strong style="font-size: 14px;">Adjust live monthly stage counts to project 30-day collected revenue and BD hourly yield</strong>
+            </div>
+            <button type="button" class="kim-btn" id="reset-sales-funnel-btn">Reset Funnel</button>
+          </div>
+
+          <div class="funnel-grid" id="sales-funnel-grid">
+            <div class="funnel-stage-card">
+              <div class="sub-kicker kim-mono">01 // Top of Funnel</div>
+              <div class="pipe-stage-name">Warm Guest Invites / mo</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="invites" data-funnel-delta="-1" aria-label="Decrease Warm Guest Invites">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-invites">20</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="invites" data-funnel-delta="1" aria-label="Increase Warm Guest Invites">+</button>
+              </div>
+              <div class="pipe-bench">Cadence: 5 invites/wk on Monday</div>
+            </div>
+
+            <div class="funnel-stage-card">
+              <div class="sub-kicker kim-mono">02 // Editorial Proof</div>
+              <div class="pipe-stage-name">Interviews Filmed / mo</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="interviews" data-funnel-delta="-1" aria-label="Decrease Interviews Filmed">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-interviews">8</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="interviews" data-funnel-delta="1" aria-label="Increase Interviews Filmed">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="funnel-rate-interviews">40% invite -&gt; shoot</div>
+            </div>
+
+            <div class="funnel-stage-card">
+              <div class="sub-kicker kim-mono">03 // Participant Care</div>
+              <div class="pipe-stage-name">24-Hr Previews Approved</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="previews" data-funnel-delta="-1" aria-label="Decrease Previews Approved">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-previews">8</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="previews" data-funnel-delta="1" aria-label="Increase Previews Approved">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="funnel-rate-previews">100% approval rate</div>
+            </div>
+
+            <div class="funnel-stage-card is-revenue">
+              <div class="sub-kicker kim-mono">04 // Round 1 ($850)</div>
+              <div class="pipe-stage-name">Start Small Packs Closed</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="r1" data-funnel-delta="-1" aria-label="Decrease Start Small Packs">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-r1">3</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="r1" data-funnel-delta="1" aria-label="Increase Start Small Packs">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="funnel-rev-r1">$2,550 collected</div>
+            </div>
+
+            <div class="funnel-stage-card is-revenue">
+              <div class="sub-kicker kim-mono">05 // Round 2 ($2,400/mo)</div>
+              <div class="pipe-stage-name">Active Story Retainers</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="r2" data-funnel-delta="-1" aria-label="Decrease Active Story Retainers">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-r2">3</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="r2" data-funnel-delta="1" aria-label="Increase Active Story Retainers">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="funnel-rev-r2">$7,200 / mo recurring</div>
+            </div>
+
+            <div class="funnel-stage-card is-revenue">
+              <div class="sub-kicker kim-mono">06 // Round 3 ($5,500/mo)</div>
+              <div class="pipe-stage-name">Prism Syndicate Seasons</div>
+              <div class="pipe-counter-row">
+                <button type="button" class="pipe-step-btn" data-funnel-target="r3" data-funnel-delta="-1" aria-label="Decrease Prism Syndicate Seasons">-</button>
+                <span class="pipe-count kim-mono" id="funnel-count-r3">0</span>
+                <button type="button" class="pipe-step-btn" data-funnel-target="r3" data-funnel-delta="1" aria-label="Increase Prism Syndicate Seasons">+</button>
+              </div>
+              <div class="pipe-rate kim-mono" id="funnel-rev-r3">$0 / mo network</div>
+            </div>
+          </div>
+
+          <div class="pipe-summary-bar" style="margin-top: 14px;">
+            <div class="kpi-card kpi-span-2">
+              <div class="kpi-label kim-mono">Expected 30-Day Collected Revenue</div>
+              <div class="kpi-num kim-mono" id="funnel-out-total">$9,750</div>
+              <div class="kpi-sub" id="funnel-out-breakdown">R1 Packs: $2,550 | R2 Retainers: $7,200 | R3 Syndicate: $0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Pod 60% Pool / BD 15%</div>
+              <div class="kpi-num kim-mono" id="funnel-out-pod">$5,850</div>
+              <div class="kpi-sub" id="funnel-out-bd">BD Originator (15%): $1,463</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label kim-mono">Interview -&gt; Paid / BD Yield</div>
+              <div class="kpi-num kim-mono" id="funnel-out-conv">37.5%</div>
+              <div class="kpi-sub" id="funnel-out-hourly">~$104 / BD hr (at 14 hrs/mo)</div>
+            </div>
           </div>
         </div>
       </section>
@@ -2429,7 +3893,9 @@ Best,
       });
     }
 
+    let redrawRafId = 0;
     function resizeSheetCanvases() {
+      cachedWordRectsAt = 0;
       const w = sheet.offsetWidth;
       const h = sheet.offsetHeight;
       [lampsCanvas, particleCanvas, toolCanvas].forEach((c) => {
@@ -2440,6 +3906,122 @@ Best,
         }
       });
       STATE.cards.forEach((st) => drawCardMedium(st));
+    }
+
+    function scheduleSheetRedraw() {
+      cachedWordRectsAt = 0;
+      if (redrawRafId) cancelAnimationFrame(redrawRafId);
+      redrawRafId = requestAnimationFrame(() => {
+        redrawRafId = 0;
+        resizeSheetCanvases();
+      });
+    }
+
+    function initCardResizeObserver() {
+      if (typeof window.ResizeObserver !== "function") return;
+      const ro = new window.ResizeObserver(() => {
+        scheduleSheetRedraw();
+      });
+      ro.observe(sheet);
+      STATE.cards.forEach((st) => ro.observe(st.el));
+    }
+
+    function copyTextWithFeedback(text, btn, statusEl, statusMsg) {
+      if (!btn) return;
+      if (!btn.dataset.origLabel) {
+        btn.dataset.origLabel = btn.textContent || "Copy";
+      }
+      const finish = () => {
+        btn.textContent = "Copied!";
+        if (statusEl && statusMsg) {
+          if (!statusEl.dataset.origText) statusEl.dataset.origText = statusEl.textContent || "";
+          statusEl.textContent = statusMsg;
+        }
+        if (btn._copyTimer) clearTimeout(btn._copyTimer);
+        btn._copyTimer = setTimeout(() => {
+          btn.textContent = btn.dataset.origLabel;
+          if (statusEl && statusEl.dataset.origText) {
+            statusEl.textContent = statusEl.dataset.origText;
+          }
+        }, 1800);
+      };
+
+      const fallbackCopy = () => {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-9999px";
+        ta.style.left = "-9999px";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try { document.execCommand("copy"); } catch (_) {}
+        document.body.removeChild(ta);
+        finish();
+      };
+
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+        navigator.clipboard.writeText(text).then(finish).catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    }
+
+    // Chapter 00: 60-Second Partner Brief Sharing & Print Controls
+    function initPartnerBriefActions() {
+      const copyBtn = document.getElementById("copy-partner-brief-btn");
+      const printBtn = document.getElementById("print-brief-btn");
+      const statusEl = document.getElementById("brief-action-status");
+
+      const PARTNER_SUMMARY_TEXT = [
+        "aurora\u2733 // 60-Second Partner Brief",
+        "",
+        "THE MODEL:",
+        "Student-led documentary pods interview local founders, alumni sales leaders, and Gen Z voices -- turning warm 45-min conversations into recurring studio stories.",
+        "",
+        "THREE DIRECT ENTRY DOORS:",
+        "- Door A ($0 Guest Seat): 45-min candid interview ('Behind the Move' or 'The Thing I Wish I'd Known') + 24-hr factual preview.",
+        "- Door B ($850 One-Time Pilot): Start Small Spotlight Pack -- 1 hero story + 6 vertical clips shipped in 7 days (100% upfront link, zero lock-in).",
+        "- Door C (Retainer or Multi-Campus): $2,400/mo People-First Story Studio (2 shoots + 16 cuts/mo; 50% upfront + Day-15 auto-bill) or $5,500/mo Prism Multi-Campus Syndicate (3-8 campuses).",
+        "",
+        "OPERATING GUARDRAILS:",
+        "- 60 / 25 / 15 transparent split (Chapter Pod / Central / Kit & Prism Reserve); <9 hrs/wk per student seat.",
+        "- Hard revision ceiling: 1 factual-accuracy check within 24 hours (no open-ended creative re-edits) + Release Pause Rule.",
+        "- No-show immunity: 24-hr confirmation lock + 2-person campus backup guest bench.",
+        "- Finals-week continuity: cross-trained backup editor + 2-week pre-shot buffer.",
+        "- Prism Independence: commercial sponsors never buy or accelerate Customer Journey Council admission.",
+        "",
+        "NEXT STEP: Share two open weekday slots for a 45-min guest interview or 15-min discovery call."
+      ].join("\n");
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", () => {
+          copyTextWithFeedback(
+            PARTNER_SUMMARY_TEXT,
+            copyBtn,
+            statusEl,
+            "60-sec plain-text partner summary copied to clipboard!"
+          );
+        });
+      }
+
+      if (printBtn) {
+        const clearPrintMode = () => {
+          document.body.classList.remove("print-brief-only");
+        };
+        window.addEventListener("afterprint", clearPrintMode);
+
+        printBtn.addEventListener("click", () => {
+          document.body.classList.add("print-brief-only");
+          try {
+            window.print();
+          } finally {
+            setTimeout(clearPrintMode, 1200);
+          }
+        });
+      }
     }
 
     function renderDarkroomLamps(nowMs) {
@@ -2591,8 +4173,7 @@ Best,
           panels.forEach((p) => {
             if (p) p.classList.toggle("active", p.id === "bd-panel-" + target);
           });
-          cachedWordRectsAt = 0;
-          requestAnimationFrame(resizeSheetCanvases);
+          scheduleSheetRedraw();
         });
       });
 
@@ -2601,32 +4182,13 @@ Best,
           const targetId = btn.getAttribute("data-copy-target");
           const pre = document.getElementById(targetId);
           if (!pre) return;
-          const text = pre.textContent || "";
-          const orig = btn.textContent;
-          const finish = () => {
-            btn.textContent = "Copied!";
-            setTimeout(() => { btn.textContent = orig; }, 1600);
-          };
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(finish).catch(() => {
-              const ta = document.createElement("textarea");
-              ta.value = text;
-              document.body.appendChild(ta);
-              ta.select();
-              try { document.execCommand("copy"); } catch (_) {}
-              document.body.removeChild(ta);
-              finish();
-            });
-          } else {
-            finish();
-          }
+          copyTextWithFeedback(pre.textContent || "", btn);
         });
       });
 
       document.querySelectorAll(".obj-item").forEach((det) => {
         det.addEventListener("toggle", () => {
-          cachedWordRectsAt = 0;
-          requestAnimationFrame(resizeSheetCanvases);
+          scheduleSheetRedraw();
         });
       });
     }
@@ -2685,10 +4247,9 @@ Best,
         document.getElementById("out-interviews-sub").textContent =
           "~" + interviewsPerChapter.toFixed(1) + " interviews / chapter / mo";
 
-        const safeGross = gross || 1;
-        const p1 = Math.round((revR1 / safeGross) * 100);
-        const p2 = Math.round((revR2 / safeGross) * 100);
-        const p3 = Math.max(0, 100 - p1 - p2);
+        const p1 = gross > 0 ? Math.round((revR1 / gross) * 100) : 0;
+        const p2 = gross > 0 ? Math.round((revR2 / gross) * 100) : 0;
+        const p3 = gross > 0 ? Math.max(0, 100 - p1 - p2) : 0;
 
         const s1 = document.getElementById("mix-seg-r1");
         const s2 = document.getElementById("mix-seg-r2");
@@ -2819,8 +4380,7 @@ Best,
       });
 
       window.addEventListener("resize", () => {
-        cachedWordRectsAt = 0;
-        resizeSheetCanvases();
+        scheduleSheetRedraw();
       });
     }
 
@@ -2870,14 +4430,252 @@ Best,
       if (document.hidden) tick(performance.now());
     }, 90);
 
+    // Chapter 07: Team Blog Timeline Status Filter
+    function initDispatchTimeline() {
+      const filterBtns = Array.from(document.querySelectorAll(".dispatch-filter-btn"));
+      const cards = Array.from(document.querySelectorAll("#dispatch-timeline .dispatch-card"));
+      const countEl = document.getElementById("dispatch-visible-count");
+      if (filterBtns.length === 0 || cards.length === 0) return;
+
+      function applyFilter(status) {
+        let visible = 0;
+        cards.forEach((card) => {
+          const match = status === "all" || card.getAttribute("data-dispatch-status") === status;
+          card.classList.toggle("is-hidden", !match);
+          if (match) visible += 1;
+        });
+        filterBtns.forEach((btn) => {
+          const on = btn.getAttribute("data-dispatch-filter") === status;
+          btn.classList.toggle("kim-btn-active", on);
+          btn.setAttribute("aria-pressed", String(on));
+        });
+        if (countEl) {
+          countEl.textContent = "Showing " + visible + " of " + cards.length + " dispatches";
+        }
+        scheduleSheetRedraw();
+      }
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          applyFilter(btn.getAttribute("data-dispatch-filter") || "all");
+        });
+      });
+    }
+
+    // Chapter 08: Recruiting Script Tabs & 5-Stage Pipeline Tracker
+    function initRecruitingKit() {
+      const tabBtns = Array.from(document.querySelectorAll(".recruit-tab-btn"));
+      const panels = [
+        document.getElementById("recruit-panel-flyer"),
+        document.getElementById("recruit-panel-dm"),
+        document.getElementById("recruit-panel-pitch")
+      ];
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-recruit-tab");
+          tabBtns.forEach((b) => {
+            const on = b === btn;
+            b.classList.toggle("kim-btn-active", on);
+            b.setAttribute("aria-selected", String(on));
+          });
+          panels.forEach((p) => {
+            if (p) p.classList.toggle("active", p.id === "recruit-panel-" + target);
+          });
+          scheduleSheetRedraw();
+        });
+      });
+
+      const STORAGE_KEY = "aurora-recruit-pipe-v1";
+      const DEFAULTS = { nominated: 24, chat: 14, trial: 7, shadow: 4, core: 3 };
+      const STAGES = ["nominated", "chat", "trial", "shadow", "core"];
+      let counts = Object.assign({}, DEFAULTS);
+
+      try {
+        const parsed = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "null");
+        if (parsed && typeof parsed === "object") {
+          STAGES.forEach((k) => {
+            if (typeof parsed[k] === "number" && parsed[k] >= 0) counts[k] = Math.round(parsed[k]);
+          });
+        }
+      } catch (_) {}
+
+      function persist() {
+        try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(counts)); } catch (_) {}
+      }
+
+      function pct(num, den) {
+        if (!den || den <= 0) return "0%";
+        return Math.round((num / den) * 100) + "%";
+      }
+
+      function renderPipe() {
+        STAGES.forEach((k) => {
+          const el = document.getElementById("pipe-count-" + k);
+          if (el) el.textContent = String(counts[k]);
+        });
+        const rNom = document.getElementById("pipe-rate-nominated");
+        const rChat = document.getElementById("pipe-rate-chat");
+        const rTrial = document.getElementById("pipe-rate-trial");
+        const rShadow = document.getElementById("pipe-rate-shadow");
+        const rCore = document.getElementById("pipe-rate-core");
+        if (rNom) rNom.textContent = counts.nominated > 0 ? "100% of top" : "Add leads";
+        if (rChat) rChat.textContent = pct(counts.chat, counts.nominated) + " from S1";
+        if (rTrial) rTrial.textContent = pct(counts.trial, counts.chat) + " from S2";
+        if (rShadow) rShadow.textContent = pct(counts.shadow, counts.trial) + " from S3";
+        if (rCore) rCore.textContent = pct(counts.core, counts.shadow) + " from S4";
+
+        const overallEl = document.getElementById("pipe-overall-rate");
+        const audEl = document.getElementById("pipe-audition-rate");
+        const benchEl = document.getElementById("pipe-bench-total");
+        const healthEl = document.getElementById("pipe-health-status");
+        const healthSub = document.getElementById("pipe-health-sub");
+
+        const overallVal = counts.nominated > 0 ? ((counts.core / counts.nominated) * 100).toFixed(1) + "%" : "0.0%";
+        const audVal = counts.trial > 0 ? ((counts.shadow / counts.trial) * 100).toFixed(1) + "%" : "0.0%";
+        const benchTotal = counts.shadow + counts.core;
+
+        if (overallEl) overallEl.textContent = overallVal;
+        if (audEl) audEl.textContent = audVal;
+        if (benchEl) benchEl.textContent = benchTotal + (benchTotal === 1 ? " seat" : " seats");
+
+        if (healthEl && healthSub) {
+          if (counts.core >= 3 && counts.shadow >= 2) {
+            healthEl.textContent = "HEALTHY";
+            healthSub.textContent = "Core pod staffed & continuity covered";
+          } else if (counts.core >= 3) {
+            healthEl.textContent = "ADD SHADOWS";
+            healthSub.textContent = "Recruit 2+ sophomore shadows before finals";
+          } else {
+            healthEl.textContent = "SEEDING";
+            healthSub.textContent = "Run 6 nominations/wk to lock 3 core seats";
+          }
+        }
+      }
+
+      document.querySelectorAll("[data-pipe-target]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const k = btn.getAttribute("data-pipe-target");
+          const d = Number(btn.getAttribute("data-pipe-delta") || "0");
+          if (!Object.prototype.hasOwnProperty.call(counts, k)) return;
+          counts[k] = Math.max(0, Math.min(999, counts[k] + d));
+          persist();
+          renderPipe();
+        });
+      });
+
+      const resetBtn = document.getElementById("reset-recruit-pipe-btn");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          counts = Object.assign({}, DEFAULTS);
+          persist();
+          renderPipe();
+        });
+      }
+
+      renderPipe();
+    }
+
+    // Chapter 09: Interactive Deal Funnel & Revenue Velocity Tracker
+    function initSalesFunnel() {
+      const STORAGE_KEY = "aurora-sales-funnel-v1";
+      const DEFAULTS = { invites: 20, interviews: 8, previews: 8, r1: 3, r2: 3, r3: 0 };
+      const KEYS = ["invites", "interviews", "previews", "r1", "r2", "r3"];
+      let state = Object.assign({}, DEFAULTS);
+
+      try {
+        const parsed = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "null");
+        if (parsed && typeof parsed === "object") {
+          KEYS.forEach((k) => {
+            if (typeof parsed[k] === "number" && parsed[k] >= 0) state[k] = Math.round(parsed[k]);
+          });
+        }
+      } catch (_) {}
+
+      const fmtUSD = (n) => "$" + Math.round(n).toLocaleString("en-US");
+
+      function persist() {
+        try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
+      }
+
+      function renderFunnel() {
+        KEYS.forEach((k) => {
+          const el = document.getElementById("funnel-count-" + k);
+          if (el) el.textContent = String(state[k]);
+        });
+
+        const revR1 = state.r1 * 850;
+        const revR2 = state.r2 * 2400;
+        const revR3 = state.r3 * 5500;
+        const totalRev = revR1 + revR2 + revR3;
+        const podPool = totalRev * 0.60;
+        const bdShare = totalRev * 0.15;
+        const bdHourly = bdShare / 14; // 3.5 hrs/wk * 4 weeks = 14 BD hrs/mo
+
+        const intRate = state.invites > 0 ? Math.round((state.interviews / state.invites) * 100) : 0;
+        const prevRate = state.interviews > 0 ? Math.round((state.previews / state.interviews) * 100) : 0;
+        const r1Conv = state.interviews > 0 ? ((state.r1 / state.interviews) * 100).toFixed(1) : "0.0";
+
+        const elIntRate = document.getElementById("funnel-rate-interviews");
+        const elPrevRate = document.getElementById("funnel-rate-previews");
+        const elRevR1 = document.getElementById("funnel-rev-r1");
+        const elRevR2 = document.getElementById("funnel-rev-r2");
+        const elRevR3 = document.getElementById("funnel-rev-r3");
+        const elTotal = document.getElementById("funnel-out-total");
+        const elBreak = document.getElementById("funnel-out-breakdown");
+        const elPod = document.getElementById("funnel-out-pod");
+        const elBd = document.getElementById("funnel-out-bd");
+        const elConv = document.getElementById("funnel-out-conv");
+        const elHourly = document.getElementById("funnel-out-hourly");
+
+        if (elIntRate) elIntRate.textContent = intRate + "% invite -> shoot";
+        if (elPrevRate) elPrevRate.textContent = prevRate + "% approval rate";
+        if (elRevR1) elRevR1.textContent = fmtUSD(revR1) + " collected";
+        if (elRevR2) elRevR2.textContent = fmtUSD(revR2) + " / mo recurring";
+        if (elRevR3) elRevR3.textContent = fmtUSD(revR3) + " / mo network";
+        if (elTotal) elTotal.textContent = fmtUSD(totalRev);
+        if (elBreak) elBreak.textContent = "R1 Packs: " + fmtUSD(revR1) + " | R2 Retainers: " + fmtUSD(revR2) + " | R3 Syndicate: " + fmtUSD(revR3);
+        if (elPod) elPod.textContent = fmtUSD(podPool);
+        if (elBd) elBd.textContent = "BD Originator (15%): " + fmtUSD(bdShare);
+        if (elConv) elConv.textContent = r1Conv + "%";
+        if (elHourly) elHourly.textContent = "~" + fmtUSD(bdHourly) + " / BD hr (at 14 hrs/mo)";
+      }
+
+      document.querySelectorAll("[data-funnel-target]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const k = btn.getAttribute("data-funnel-target");
+          const d = Number(btn.getAttribute("data-funnel-delta") || "0");
+          if (!Object.prototype.hasOwnProperty.call(state, k)) return;
+          state[k] = Math.max(0, Math.min(999, state[k] + d));
+          persist();
+          renderFunnel();
+        });
+      });
+
+      const resetBtn = document.getElementById("reset-sales-funnel-btn");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          state = Object.assign({}, DEFAULTS);
+          persist();
+          renderFunnel();
+        });
+      }
+
+      renderFunnel();
+    }
+
     // Boot Sequence
     registerAllCards();
     applyThemeTokens();
     renderMediumRibbon();
     initControls();
+    initPartnerBriefActions();
     initBdScripts();
     initEconomicsCalculator();
     initChecklist();
+    initDispatchTimeline();
+    initRecruitingKit();
+    initSalesFunnel();
+    initCardResizeObserver();
     resizeSheetCanvases();
     tick(performance.now());
     requestAnimationFrame(raf);
